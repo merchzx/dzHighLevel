@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #myDiv {
+            margin: 0px;
+            width: 400px;
+            margin-top: 20%;
+            margin-left: 40%;
+        }
+    </style>
+    <div id="myDiv">
+        <p id="whatIsLorem"></p>
+        <p id="whyDoWeUseIt"></p>
+        <p id="lorem"></p>
+        <p id="whereDoesItCome"></p>
+        <p id="whereCanIGet"></p>
+    </div>
+
+
+
+    <script>
+        let what = document.getElementById("whatIsLorem");
+        let why = document.getElementById("whyDoWeUseIt");
+        let lorem = document.getElementById("lorem");
+        let whereUse = document.getElementById("whereDoesItCome");
+        let whereGet = document.getElementById("whereCanIGet");
+
+
+        what.innerText = "What is Lorem Ipsum?";
+        why.innerText = "Why do we use it?";
+        lorem.innerText = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga architecto nihil a velit veritatis autem recusandae, eveniet consequuntur ipsa beatae rem saepe alias commodi accusantium doloremque ipsum mollitia, numquam qui!"
+        whereUse.innerText = "Where does it come from?";
+        whereGet.innerText = "Where can i get some?";
+
+
+        lorem.style.color = "grey";
+        what.style.color = "white";
+        why.style.color = "white";
+        whereGet.style.color = "white";
+        whereUse.style.color = "white";
+
+        what.style.backgroundColor = "blue";
+        what.style.border = "1px solid black";
+        why.style.backgroundColor = "blue";
+        why.style.border = "1px solid black";
+        whereGet.style.backgroundColor = "blue";
+        whereGet.style.border = "1px solid black";
+        whereUse.style.backgroundColor = "blue";
+        whereUse.style.border = "1px solid black";
+        lorem.style.backgroundColor = "cyan";
+        lorem.style.border = "1px solid black";
+
+        
+        lorem.style.margin = "0px";
+        whereUse.style.margin ="0px";
+        whereGet.style.margin ="0px";
+        why.style.margin ="0px";
+        what.style.margin ="0px";
+        function switchColor() {
+            let p = document.getElementById("lorem");
+            if (flag)
+            {
+                p.style.color = color[index];
+                p.style.backgroundColor = color[color.length - 1 - index];
+                index++;
+            }
+
+            flag =!flag;
+        }
+    </script>
+
+    <script>
+        let flag = false;
+        let index = 0;
+        let color = new Array("red", "yellow", "green", "magenta", "blue");
+        let timer = setInterval("switchColor()",500);
+    </script>
+
+</body>
+
+</html>
