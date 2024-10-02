@@ -68,7 +68,6 @@
             let p = document.getElementById("lorem");
             if (flag)
             {
-                p.style.color = color[index];
                 p.style.backgroundColor = color[color.length - 1 - index];
                 index++;
             }
@@ -80,7 +79,7 @@
     <script>
         let flag = false;
         let index = 0;
-        let color = new Array("red", "yellow", "green", "magenta", "blue");
+        let color = new Array("red", "yellow", "green", "magenta", "blue","cyan");
         let timer = setInterval("switchColor()",500);
     </script>
 
